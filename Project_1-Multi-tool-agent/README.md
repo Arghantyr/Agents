@@ -1,6 +1,61 @@
 # About
 This repo serves as a playground for testing AI agent systems.
 
+# Getting started
+## (Optional) Create (and navigate to) a new directory
+```bash
+mkdir Test
+cd Test
+```
+
+## Clone this repository
+### Using SSH
+```bash
+gh repo clone git@github.com:Arghantyr/Agents.git
+```
+
+or
+
+```bash
+gh repo clone Arghantyr/Agents
+```
+
+### Using HTTPS
+```bash
+git clone https://github.com/Arghantyr/Agents.git
+```
+
+## Navigate to a Project of choice
+```bash
+cd ./Agents/{Project of choice...}
+```
+
+## Create (and activate) a new virtual environment
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+## Pip install dependencies from the 'requirements.txt'
+```bash
+pip install -r requirements.txt
+```
+
+## Create a '.env' environment file for your Google API key
+```bash
+touch .env
+echo 'GOOGLE_API_KEY="<Your Google API Key>"' > .env
+```
+Google API keys are generated per project in Google AI Studio (verified on 2026.04.04).
+
+## Run the agent project using 'adk run'
+Example: for "Project\_1-Multi-tool-agent" this is "multi\_tool\_agent"
+```bash
+adk run multi_tool_agent
+```
+That's it! You're good to go!
+
+
 # Changelog
 2026.04.04  Add tool 'get\_memory\_usage' to monitor memory-related statistics.
 2026.04.04  Project 1 begins. Testing Google's Agent Development Kit.
