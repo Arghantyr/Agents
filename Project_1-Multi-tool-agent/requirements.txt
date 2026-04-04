@@ -1,0 +1,2 @@
+google-adk==1.28.1
+psutil==7.2.2
