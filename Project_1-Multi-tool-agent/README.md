@@ -57,8 +57,8 @@ That's it! You're good to go!
 
 
 # Changelog
-2026.04.04  Add tool 'get\_memory\_usage' to monitor memory-related statistics.
-2026.04.04  Project 1 begins. Testing Google's Agent Development Kit.
+- 2026.04.04  Add tool 'get\_memory\_usage' to monitor memory-related statistics.
+- 2026.04.04  Project 1 begins. Testing Google's Agent Development Kit.
 
 # Projects
 1. Project 1: Multi-tool agent
