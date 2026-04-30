@@ -12,4 +12,4 @@ Currently only Google API-based solution is verified as supported.
 If you have any questions or feedback, the best place to go are the [Github Discussions](https://github.com/Arghantyr/Agents/discussions).
 
 # TODO
-- Project 2: Fully local agent
+- Project 2: Multi-tool agent (local model)
