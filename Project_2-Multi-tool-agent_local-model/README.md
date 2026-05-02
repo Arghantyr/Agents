@@ -48,8 +48,18 @@ echo 'GOOGLE_API_KEY="<Your Google API Key>"' > .env
 ```
 Google API keys are generated per project in Google AI Studio (verified on 2026.04.04).
 
+## Install ollama service to manage local models
+```bash
+sudo /bin/bash install_dependencies.sh
+```
+
+## Pull Qwen2.5 model from ollama servers
+```bash
+ollama pull qwen2.5
+```
+
 ## Run the agent project using 'adk run'
-Example: for "Project\_1-Multi-tool-agent" this is "multi\_tool\_agent"
+Example: for "Project\_2-Multi-tool-agent\_local-model" this is "multi\_tool\_agent"
 ```bash
 adk run multi_tool_agent
 ```
@@ -57,45 +67,40 @@ That's it! You're good to go!
 
 
 # Changelog
-- 2026.04.04  Add tool 'get\_memory\_usage' to monitor memory-related statistics.
-- 2026.04.04  Project 1 begins. Testing Google's Agent Development Kit.
+- 2026.05.01  Project 2 begins. Local model served with Ollama and LiteLLM.
 
 # Projects
-1. Project 1: Multi-tool agent
+1. Project 2: Multi-tool agent (local model, downloaded from web)
 
 # Examples
 ## Memory usage
 ```python
-[user]: Hello
-[helpful_agent]: Hello! How can I help you today?
+[user]: Hello.
+22:56:25 - LiteLLM:INFO: utils.py:3995 -
+LiteLLM completion() model= qwen2.5; provider = ollama_chat
+[helpful_agent]: Hello! How can I assist you today?
 [user]: I want to perform some work on this system. How can you assist me with that?
-[helpful_agent]: I can assist you in several ways depending on your needs. Since I have access to a set of system tools, I can help you with tasks like:
+22:56:31 - LiteLLM:INFO: utils.py:3995 -
+LiteLLM completion() model= qwen2.5; provider = ollama_chat
+[helpful_agent]: Of course! To better assist you, could you please provide more details about the tasks you plan to perform? For example, are you looking to optimize performance, manage memory usage, or execute a specific program or script?
+[user]: Yes, use available tools to fetch the memory stats.
+22:57:22 - LiteLLM:INFO: utils.py:3995 -
+LiteLLM completion() model= qwen2.5; provider = ollama_chat
+22:57:26 - LiteLLM:INFO: utils.py:3995 -
+LiteLLM completion() model= qwen2.5; provider = ollama_chat
+[helpful_agent]: Here are the current memory statistics for this system:
 
-*   **System Monitoring:** I can check the system's current state, such as memory usage, to help you understand how your resources are being utilized.
-*   **Information Gathering:** I can provide details about the system or help you navigate tasks related to its configuration.
+- **Total Memory**: 15.8 GB
+- **Available Memory**: 9.74 GB
+- **Used Memory**: 6.01 GB (36.2%)
+- **Free Memory**: 5.62 GB
+- **Active Memory**: 16 MB
+- **Inactive Memory**: 9.55 GB
+- **Buffers**: 21.87 MB
+- **Cached Memory**: 4.73 GB
+- **Shared Memory**: 0.35 MB
+- **Slab Kernel Memory**: 93.59 MB
 
-**To get started, you could ask me something like:**
-*   "What is the current memory usage of this system?"
-*   "Can you help me understand how much memory is available?"
-
-Please let me know what specific work you are looking to perform, and I will do my best to assist you!
-[user]: How much memory is currently used?
-[helpful_agent]: The system is currently using approximately 636 MB of memory out of the total 16.6 GB available, which means about 3.8% of the memory is in use.
-[user]: Can you provide detailed statistics?
-[helpful_agent]: Here are the detailed memory statistics for the system:
-
-*   **Total Memory:** 16.61 GB (16,613,867,520 bytes)
-*   **Used Memory:** 636.30 MB (636,297,216 bytes)
-*   **Available Memory:** 15.98 GB (15,977,570,304 bytes)
-*   **Free Memory:** 16.04 GB (16,043,442,176 bytes)
-*   **Memory Usage Percentage:** 3.8%
-*   **Active Memory:** 54.04 MB
-*   **Inactive Memory:** 209.03 MB
-*   **Buffers:** 0.62 MB
-*   **Cached:** 127.74 MB
-*   **Shared Memory:** 3.65 MB
-*   **Slab:** 80.46 MB
-
-Let me know if you need any further information!
+Would you like to proceed with any specific task based on this information?
 [user]: exit
 ```
