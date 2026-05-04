@@ -14,4 +14,4 @@ Using locally deployed Qwen2.5 via LiteLLM integration and served by Ollama.
 If you have any questions or feedback, the best place to go are the [Github Discussions](https://github.com/Arghantyr/Agents/discussions).
 
 # TODO
-- Project 3: Multi-tool agent (local model, imported from the disk)
+- Project 4: Multi-tool agent (local model, imported from the disk)
