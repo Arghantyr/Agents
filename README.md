@@ -8,7 +8,9 @@ A step-by-step tutorial with example usage can be found in each project, separat
 ## Project 1: Multi-tool agent
 Currently only Google API-based solution is verified as supported.
 ## Project 2: Multi-tool agent (downloaded and deployed locally)
-Using locally deployed Qwen2.5 via LiteLLM integration and served by Ollama.
+Using locally deployed Qwen2.5 via LiteLLM integration and served by Ollama
+## Project 3: Multi-tool multiagent (local with a local subagent)
+Using locally deployed Qwen2.5 (LiteLLM+Ollama) orchestrating agent with a Functiongemma subagent using a tool.
 
 # Questions and feedback
 If you have any questions or feedback, the best place to go are the [Github Discussions](https://github.com/Arghantyr/Agents/discussions).
