@@ -1,6 +1,8 @@
 FROM ../src/qwen2.5-3b-instruct-q4_k_m.gguf
 
-TEMPLATE """{{- if .Messages }}
+TEMPLATE """
+{{- if .Suffix }}<|fim_prefix|>{{ .Prompt }}<|fim_suffix|>{{ .Suffix }}<|fim_middle|>
+{{- else if .Messages }}
 {{- if or .System .Tools }}<|im_start|>system
 {{- if .System }}
 {{ .System }}
@@ -49,7 +51,8 @@ For each function call, return a json object with function name and arguments wi
 {{ end }}{{ if .Prompt }}<|im_start|>user
 {{ .Prompt }}<|im_end|>
 {{ end }}<|im_start|>assistant
-{{ end }}{{ .Response }}{{ if .Response }}<|im_end|>{{ end }}"""
+{{ end }}{{ .Response }}{{ if .Response }}<|im_end|>{{ end }}
+"""
  
 SYSTEM "You are a helpful assistant. Answer questions to the bets of your knowledge"
 
