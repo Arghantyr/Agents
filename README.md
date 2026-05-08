@@ -11,9 +11,13 @@ Currently only Google API-based solution is verified as supported.
 Using locally deployed Qwen2.5 via LiteLLM integration and served by Ollama
 ## Project 3: Multi-tool multiagent (local with a local subagent)
 Using locally deployed Qwen2.5 (LiteLLM+Ollama) orchestrating agent with a Functiongemma subagent using a tool.
+## Project 4: Multi-tool agent (local model, imported from the disk)
+Using locally deployed Qwen2.5 (LiteLLM+Ollama) created from a GGUF file with a custom Modelfile.
 
 # Questions and feedback
 If you have any questions or feedback, the best place to go are the [Github Discussions](https://github.com/Arghantyr/Agents/discussions).
 
 # TODO
-- Project 4: Multi-tool agent (local model, imported from the disk)
+- Sequential agent team
+- Parallel experts
+- RAG implementation
